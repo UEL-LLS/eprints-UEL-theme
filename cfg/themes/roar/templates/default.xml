@@ -14,6 +14,7 @@
       <div class="ep_tm_site_logo">
         <a href="{$config{frontpage}}" title="{phrase('archive_name')}">
           <img alt="{phrase('archive_name')}" src="{$config{rel_path}}{$config{site_logo}}"/>
+          <!--img alt="{phrase('archive_name')}" src="{$config{rel_path}}/roar_template/Images/uel_logos.png"/-->
         </a>
       </div>
       <ul class="ep_tm_menu">
