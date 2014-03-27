@@ -1,0 +1,22 @@
+/* WEBFONTS
+-------------------------------------------------- */
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('http://www.uel.ac.uk//wwwmedia/uelwebsite/styleassets/fonts/26ECCB_1_0.eot');
+  src: url('http://www.uel.ac.uk//wwwmedia/uelwebsite/styleassets/fonts/26ECCB_1_0.eot?#iefix') format('embedded-opentype'), url('http://www.uel.ac.uk//wwwmedia/uelwebsite/styleassets/fonts/26ECCB_1_0.woff') format('woff'), url('http://www.uel.ac.uk//wwwmedia/uelwebsite/styleassets/fonts/26ECCB_1_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Helvetica Neue Light';
+  src: url('http://www.uel.ac.uk//wwwmedia/uelwebsite/styleassets/fonts/26ECCB_0_0.eot');
+  src: url('http://www.uel.ac.uk//wwwmedia/uelwebsite/styleassets/fonts/26ECCB_0_0.eot?#iefix') format('embedded-opentype'), url('http://www.uel.ac.uk//wwwmedia/uelwebsite/styleassets/fonts/26ECCB_0_0.woff') format('woff'), url('http://www.uel.ac.uk//wwwmedia/uelwebsite/styleassets/fonts/26ECCB_0_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Helvetica Neue Medium';
+  src: url('http://www.uel.ac.uk//wwwmedia/uelwebsite/styleassets/fonts/26ECCB_2_0.eot');
+  src: url('http://www.uel.ac.uk//wwwmedia/uelwebsite/styleassets/fonts/26ECCB_2_0.eot?#iefix') format('embedded-opentype'), url('http://www.uel.ac.uk//wwwmedia/uelwebsite/styleassets/fonts/26ECCB_2_0.woff') format('woff'), url('http://www.uel.ac.uk//wwwmedia/uelwebsite/styleassets/fonts/26ECCB_2_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Helvetica Neue Bold';
+  src: url('http://www.uel.ac.uk//wwwmedia/uelwebsite/styleassets/fonts/26EC1B_0_0.eot');
+  src: url('http://www.uel.ac.uk//wwwmedia/uelwebsite/styleassets/fonts/26EC1B_0_0.eot?#iefix') format('embedded-opentype'), url('http://www.uel.ac.uk//wwwmedia/uelwebsite/styleassets/fonts/26EC1B_0_0.woff') format('woff'), url('http://www.uel.ac.uk//wwwmedia/uelwebsite/styleassets/fonts/26EC1B_0_0.ttf') format('truetype');
+}

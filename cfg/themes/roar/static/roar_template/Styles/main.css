@@ -1,0 +1,145 @@
+body {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px line-height: 20px;
+color: #333333;
+}
+
+#main_page > nav {
+margin-bottom: 1em;
+}
+
+.ep_tm_key_tools li {
+	border: none!important
+}
+.ep_tm_key_tools {
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+padding: 5px;
+
+}
+.ep_tm_page_content {
+width: 100%;
+min-width: 0;
+margin-top: 0;
+}
+
+#uel-navbackground {
+	
+}
+#uel-navbar {
+border: none;
+border-radius: none;
+}
+.navbar {
+min-height: 30px
+}
+#uel-navbar, #uel-navbackground {
+background: #009bd9;
+
+}
+#uel-navbar, #uel-navbackground a {
+color: #fff;
+}
+
+
+.navbar-header .brand {
+background: url("http://www.uel.ac.uk/wwwmedia/uelwebsite/styleassets/images/sprites_secondary.png") no-repeat -150px -48px;
+background-size: 273px 410px; 
+width: 144px;
+}
+
+/*.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle .icon-bar {
+background-color: #transparent!important;
+}*/
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+background-color: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+background-color: #fff;
+}
+.navbar-default .navbar-toggle:focus .icon-bar , .navbar-default .navbar-toggle:hover .icon-bar {
+background-color: #009bd9;
+}
+
+#topnav > ul > li.active {
+	display: none;
+}
+
+@media screen and (min-width:768px){
+
+#topnav > ul > li.active {
+        display: block;
+}
+
+.navbar-header .title {
+	width: 100px;
+	height: 30px;
+	margin-top:5px;		
+}
+
+
+#main_page {
+        margin-top: 1em;
+        min-height: 20em;
+}
+
+
+#uel-navbar, #uel-navbackground {
+background: -moz-linear-gradient(top, #009bd9 0%, #028ec7 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #009bd9), color-stop(100%, #028ec7));
+background: -webkit-linear-gradient(top, #009bd9 0%, #028ec7 100%);
+background: -o-linear-gradient(top, #009bd9 0%, #028ec7 100%);
+background: -ms-linear-gradient(top, #009bd9 0%, #028ec7 100%);
+background: linear-gradient(to bottom, #009bd9 0%, #028ec7 100%);
+
+height: 30px;
+color: #fff;
+}
+
+.navbar #topnav .nav > li > a {
+padding: 5px 7px;
+font-size: 13px;
+text-transform: none;
+font-weight: bold;
+border-left: 1px solid #53bce9;
+border-right: 1px solid #0774a2;
+}
+#topnav > ul > li.active > a {
+color: #009ad8;
+background-color: #fff;
+border-bottom: 1px solid #FFF;
+}
+.navbar-header .brand {
+width: 376px;
+height: 118px;
+position: absolute;
+top: 35px;
+left: 1px;
+background: url("http://www.uel.ac.uk/wwwmedia/uelwebsite/styleassets/images/sprites_secondary.png") no-repeat -410px -10px;
+padding: 0;
+margin-left: 0px!important;
+}
+
+.navbar-header .title {
+display: none;
+}
+#lowernav li > a {
+background: #fff;
+font-size: 14px;
+font-weight: normal;
+color: #444;
+border: 0 none;
+padding: 14px 13px 16px;
+}
+
+#lowernav li > a:hover {
+border: 0 none;
+color: #0063A4;
+text-transform: none;
+}
+
+	#topnav,#lowernav {
+
+	left: 25.2em;
+	position: relative
+	}
+}	
