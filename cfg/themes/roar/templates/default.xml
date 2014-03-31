@@ -1,99 +1,157 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE html SYSTEM "entities.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epc="http://eprints.org/ep3/control">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title><epc:pin ref="title" textonly="yes"/> - <epc:phrase ref="archive_name"/></title>
-    <link rel="icon" href="{$config{rel_path}}/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="{$config{rel_path}}/favicon.ico" type="image/x-icon"/>
-    <epc:pin ref="head"/>
+    <title>
+      <epc:pin ref="title" textonly="yes" />
+      -
+      <epc:phrase ref="archive_name" />
+    </title>
+    <link rel="icon" href="{$config{rel_path}}/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="{$config{rel_path}}/favicon.ico" type="image/x-icon" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" />
+    <epc:pin ref="head" />
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- UEL styles -->
+    <link href="{$config{rel_path}}/roar_template/Styles/main.css" rel="stylesheet" />
+    <link href="{$config{rel_path}}/roar_template/Styles/webfonts.css" rel="stylesheet" />
+    <link href="{$config{rel_path}}/roar_template/Styles/search.css" rel="stylesheet" />
+    <link href="{$config{rel_path}}/roar_template/Styles/UEL.css" rel="stylesheet" />
+    <link href="{$config{rel_path}}/roar_template/Styles/recollect_overrides.css" rel="stylesheet" />
   </head>
   <body>
-    <epc:pin ref="pagetop"/>
-    <div class="ep_tm_header ep_noprint">
-      <div class="ep_tm_site_logo">
-        <a href="{$config{frontpage}}" title="{phrase('archive_name')}">
-          <img alt="{phrase('archive_name')}" src="{$config{rel_path}}{$config{site_logo}}"/>
-          <!--img alt="{phrase('archive_name')}" src="{$config{rel_path}}/roar_template/Images/uel_logos.png"/-->
-        </a>
+    <epc:pin ref="pagetop" />
+    <header>
+      <div id="uel-navbackground">
+        <div id="uel-navbar" class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#lowernav">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar" />
+                <span class="icon-bar" />
+                <span class="icon-bar" />
+              </button>
+              <a class="navbar-brand brand hidden-xs" href="http://www.uel.ac.uk" />
+              <a class="navbar-brand hidden-sm hidden-md hidden-lg" href="http://www.uel.ac.uk">UEL.ac.uk</a>
+              <h1 class="sr-only">
+                <epc:phrase ref="archive_name" />
+              </h1>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="topnav">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a href="http://www.uel.ac.uk">Home</a>
+                </li>
+                <li>
+                  <a href="http://www.uel.ac.uk/applicants/">Applicants</a>
+                </li>
+                <li>
+                  <a href="http://www.uel.ac.uk/students/">Students</a>
+                </li>
+                <li>
+                  <a href="http://www.uel.ac.uk/staff/">Staff</a>
+                </li>
+                <li>
+                  <a href="http://www.uel.ac.uk/research/">Research</a>
+                </li>
+                <li>
+                  <a href="http://www.uel.ac.uk/alumni/">Alumni</a>
+                </li>
+                <li>
+                  <a href="http://www.uel.ac.uk/about/governance-and-management/schools/">Academic Schools</a>
+                </li>
+                <li>
+                  <a href="http://www.uel.ac.uk/contactus/">Contact Us</a>
+                </li>
+                <li class="active">
+                  <a href="{$config{http_url}}">ROAR</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.navbar-collapse #topnav-->
+            <div class="collapse navbar-collapse" id="lowernav">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a href="{$config{http_url}}">ROAR Home</a>
+                </li>
+                <li>
+                  <a href="{$config{http_url}}/information.html">
+                    <epc:phrase ref="template/navigation:about" />
+                  </a>
+                </li>
+                <li>
+                  <a href="{$config{http_url}}/view/" menu="ep_tm_menu">
+                    <epc:phrase ref="template/navigation:browse" />
+                  </a>
+                </li>
+                <li>
+                  <a href="{$config{http_url}}/view/divisions/">Browse by School</a>
+                </li>
+                <li>
+                  <a href="http://roar.uel.ac.uk/view/creators/">Browse by Author</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /#lowernav -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- /#uel-navbar -->
       </div>
-      <ul class="ep_tm_menu">
-        <li>
-          <a href="{$config{http_url}}">
-            <epc:phrase ref="template/navigation:home"/>
-          </a>
-        </li>
-        <li>
-          <a href="{$config{http_url}}/information.html">
-            <epc:phrase ref="template/navigation:about"/>
-          </a>
-        </li>
-        <li>
-          <a href="{$config{http_url}}/view/" menu="ep_tm_menu_browse">
-            <epc:phrase ref="template/navigation:browse"/>
-          </a>
-          <ul id="ep_tm_menu_browse" style="display:none;">
-            <li>
-              <a href="{$config{http_url}}/view/year/">
-                <epc:phrase ref="bin/generate_views:indextitleprefix"/>
-                <epc:phrase ref="viewname_eprint_year"/>
-              </a>
-            </li>
-            <li>
-              <a href="{$config{http_url}}/view/subjects/">
-                <epc:phrase ref="bin/generate_views:indextitleprefix"/>
-                <epc:phrase ref="viewname_eprint_subjects"/>
-              </a>
-            </li>
-            <li>
-              <a href="{$config{http_url}}/view/divisions/">
-                <epc:phrase ref="bin/generate_views:indextitleprefix"/>
-                <epc:phrase ref="viewname_eprint_divisions"/>
-              </a>
-            </li>
-            <li>
-              <a href="{$config{http_url}}/view/creators/">
-                <epc:phrase ref="bin/generate_views:indextitleprefix"/>
-                <epc:phrase ref="viewname_eprint_creators"/>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <table class="ep_tm_searchbar">
-        <tr>
-          <td align="left">
-            <epc:pin ref="login_status"/>
-          </td>
-          <td align="right" style="white-space: nowrap">
-            <epc:pin ref="languages"/>
-            <form method="get" accept-charset="utf-8" action="{$config{http_cgiurl}}/search" style="display:inline">
-              <input class="ep_tm_searchbarbox" size="20" type="text" name="q"/>
-              <input class="ep_tm_searchbarbutton" value="{phrase('lib/searchexpression:action_search')}" type="submit" name="_action_search"/>
-              <input type="hidden" name="_action_search" value="Search"/>
-              <input type="hidden" name="_order" value="bytitle"/>
-              <input type="hidden" name="basic_srchtype" value="ALL"/>
-              <input type="hidden" name="_satisfyall" value="ALL"/>
-            </form>
-          </td>
-        </tr>
-      </table>
+      <!-- /#navbackground -->
+      <div class="emptyCarouselPlaceholder" />
+    </header>
+    <hr style="width:100%; margin-bottom: 10px; margin-top: 0;" />
+    <div id="repo_search" class="container-fluid">
+      <section>
+        <h2 class="sr-only">Search the repository</h2>
+        <form method="get" accept-charset="utf-8" action="{$config{http_cgiurl}}/search" style="display:inline">
+          <div id="search_box" class="col-md-offset-0 col-md-2 col-sm-8 col-xs-9">
+            <i class="glyphicon glyphicon-search" />
+            <input type="search" placeholder="Search the repository" class="ep_tm_searchbarboxX form-control" name="q" />
+          </div>
+          <div class="col-md-1 col-sm-2 col-xs-2">
+            <button class="btn btn-primary btn-uel" value="{phrase('lib/searchexpression:action_search')}" type="submit" name="_action_search">Search</button>
+          </div>
+          <input type="hidden" name="_action_search" value="Search" />
+          <input type="hidden" name="_order" value="bytitle" />
+          <input type="hidden" name="basic_srchtype" value="ALL" />
+          <input type="hidden" name="_satisfyall" value="ALL" />
+        </form>
+      </section>
     </div>
-    <div>
-      <div class="ep_tm_page_content">
-        <h1 class="ep_tm_pagetitle">
-          <epc:pin ref="title"/>
-        </h1>
-        <epc:pin ref="page"/>
-      </div>
-    </div>
-    <div class="ep_tm_footer ep_noprint">
-      <div class="ep_tm_eprints_logo">
-        <a href="http://eprints.org/software/">
-          <img alt="EPrints Logo" src="{$config{rel_path}}/images/eprintslogo.gif"/>
-        </a>
-      </div>
-      <epc:phrase ref="template:about_eprints"/>
+    <!-- /#repo_search -->
+    <div id="main_page" class="container-fluid">
+      <nav class="col-md-2 col-sm-2 col-xs-12">
+        <h2 class="sr-only">Menu</h2>
+        <epc:pin ref="login_status" />
+      </nav>
+      <main id="page" class="col-md-8 col-sm-8 col-xs-12">
+        <div class="ep_tm_page_content">
+          <h1 class="ep_tm_pagetitle">
+            <epc:pin ref="title" />
+          </h1>
+          <epc:pin ref="page" />
+        </div>
+      </main>
+      <footer>
+        <div class="ep_tm_footer ep_noprint">
+          <div class="ep_tm_eprints_logo">
+            <a href="http://eprints.org/software/">
+              <img alt="EPrints Logo" src="{$config{rel_path}}/images/eprintslogo.gif" />
+            </a>
+          </div>
+          <epc:phrase ref="template:about_eprints" />
+        </div>
+      </footer>
     </div>
   </body>
 </html>

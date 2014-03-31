@@ -1,17 +1,20 @@
+.hidden {display: position: absolute; left -9999px; top:-9999px;}
+
+
 body {
 font-family: Arial, Helvetica, sans-serif;
 font-size: 14px line-height: 20px;
 color: #333333;
 }
 
-#main_page > nav {
+#main_page > nav, #main_page > main {
 margin-bottom: 1em;
 }
 
 .ep_tm_key_tools li {
 	border: none!important
 }
-.ep_tm_key_tools {
+.ep_tm_key_tools ,.shadow, .ep_tm_page_content {
 box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 padding: 5px;
 
@@ -40,6 +43,10 @@ background: #009bd9;
 color: #fff;
 }
 
+.navbar-collapse {
+border: none;
+box-shadow: none;
+}
 
 .navbar-header .brand {
 background: url("http://www.uel.ac.uk/wwwmedia/uelwebsite/styleassets/images/sprites_secondary.png") no-repeat -150px -48px;
@@ -64,18 +71,12 @@ background-color: #009bd9;
 	display: none;
 }
 
+
 @media screen and (min-width:768px){
 
 #topnav > ul > li.active {
         display: block;
 }
-
-.navbar-header .title {
-	width: 100px;
-	height: 30px;
-	margin-top:5px;		
-}
-
 
 #main_page {
         margin-top: 1em;
@@ -83,7 +84,8 @@ background-color: #009bd9;
 }
 
 
-#uel-navbar, #uel-navbackground {
+/*#uel-navbar, #uel-navbackground {*/
+#uel-navbar {
 background: -moz-linear-gradient(top, #009bd9 0%, #028ec7 100%);
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #009bd9), color-stop(100%, #028ec7));
 background: -webkit-linear-gradient(top, #009bd9 0%, #028ec7 100%);
@@ -91,7 +93,8 @@ background: -o-linear-gradient(top, #009bd9 0%, #028ec7 100%);
 background: -ms-linear-gradient(top, #009bd9 0%, #028ec7 100%);
 background: linear-gradient(to bottom, #009bd9 0%, #028ec7 100%);
 
-height: 30px;
+height: 31px;
+border-bottom: 1px solid #0973a0;
 color: #fff;
 }
 
@@ -103,11 +106,15 @@ font-weight: bold;
 border-left: 1px solid #53bce9;
 border-right: 1px solid #0774a2;
 }
-#topnav > ul > li.active > a {
+#topnav > ul > li.active > a, #topnav > ul > li:hover > a {
 color: #009ad8;
 background-color: #fff;
 border-bottom: 1px solid #FFF;
+
+border-left: 1px solid #fff!important;
+border-right: 1px solid #fff!important;
 }
+
 .navbar-header .brand {
 width: 376px;
 height: 118px;
@@ -119,9 +126,6 @@ padding: 0;
 margin-left: 0px!important;
 }
 
-.navbar-header .title {
-display: none;
-}
 #lowernav li > a {
 background: #fff;
 font-size: 14px;
@@ -142,4 +146,7 @@ text-transform: none;
 	left: 25.2em;
 	position: relative
 	}
-}	
+}
+
+
+
