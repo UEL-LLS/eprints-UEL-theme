@@ -4,19 +4,45 @@
 
 ****************************/
 
-@UEL-blue: #0397D6;
-@UEL-alt-blue: #0063A4;
+@UEL-blue: 	#0397D6;
+@UEL-alt-blue: 	#0063A4;
+@UEL-font: 	#505050;
+@UEL-amaranth: 	#E61B50;
+
+@ROAR-primary: 	#00C322; 
+@ROAR-secondary:#259238;
+@DATA-primary: 	#06799F;
+@DATA-secondary:#06799F;
+
+/**********************************************
+
+      Colour scheme:
+// http://colorschemedesigner.com/#2S41Xw0w0w0w0
+
+/***********************************************/
+
 
 
 
 @media screen and (min-width:768px){
-.emptyCarouselPlaceholder {
-height: 124px;
-/* border-bottom: 1px solid #dadada; */
-}
-}
-.btn-uel {
+	.emptyCarouselPlaceholder {
+		height: 124px;
+	}
 
+	.uel-grad {
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #009bd9), color-stop(100%, #028ec7));
+		background: -webkit-linear-gradient(top, #009bd9 0%, #028ec7 100%);
+		background: -o-linear-gradient(top, #009bd9 0%, #028ec7 100%);
+		background: -ms-linear-gradient(top, #009bd9 0%, #028ec7 100%);
+		background: linear-gradient(to bottom, #009bd9 0%, #028ec7 100%);
+	}
+}
+
+body {
+color: @UEL-font;
+}
+
+.btn-uel {
 background-color: @UEL-blue;
 }
 .btn-uel:hover {
@@ -30,11 +56,3 @@ border-top: 1px solid #eeeeee;
 border-bottom: 1px solid #ffffff;
 }
 
-.uelgrad {
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #009bd9), color-stop(100%, #028ec7));
-background: -webkit-linear-gradient(top, #009bd9 0%, #028ec7 100%);
-background: -o-linear-gradient(top, #009bd9 0%, #028ec7 100%);
-background: -ms-linear-gradient(top, #009bd9 0%, #028ec7 100%);
-background: linear-gradient(to bottom, #009bd9 0%, #028ec7 100%);
-
-}
