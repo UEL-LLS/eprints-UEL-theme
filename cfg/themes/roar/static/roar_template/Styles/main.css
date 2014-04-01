@@ -15,6 +15,9 @@ margin-bottom: 1em;
 	border: none!important
 }
 .ep_tm_key_tools ,.shadow, .ep_tm_page_content {
+box-shadow: none;
+}
+.shadow {
 box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 padding: 5px;
 

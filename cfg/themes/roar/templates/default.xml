@@ -133,11 +133,13 @@
     <!-- /#repo_search -->
     <div id="main_page" class="container-fluid">
       <nav class="col-md-2 col-sm-2 col-xs-12">
-        <h2 class="sr-only">Menu</h2>
-        <epc:pin ref="login_status" />
+        <div class="shadow">
+	 <h2 class="sr-only">Menu</h2>
+	 <epc:pin ref="login_status" />
+	</div>
       </nav>
       <main id="page" class="col-md-8 col-sm-8 col-xs-12">
-        <div class="ep_tm_page_content">
+        <div class="ep_tm_page_content shadow">
           <h1 class="ep_tm_pagetitle">
             <epc:pin ref="title" />
           </h1>
