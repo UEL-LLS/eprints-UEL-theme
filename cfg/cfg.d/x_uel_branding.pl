@@ -1,1 +1,0 @@
-$c->{theme} = 'roar';
