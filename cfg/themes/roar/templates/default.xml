@@ -148,7 +148,8 @@
       </main>
       <aside class="col-md-2 col-sm-2 hidden-xs">
 	<div class="shadow">
-	<h3>Sidebar</h3>
+	<h3><epc:phrase ref="archive_name" /></h3>
+	<epc:phrase ref="about_repo" />
 	</div>
       </aside>
       <footer>
