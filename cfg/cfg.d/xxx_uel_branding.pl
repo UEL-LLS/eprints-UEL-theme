@@ -12,9 +12,9 @@ $c->{eprint_render} = sub {
 
     my ($eprint, $repository, $preview) = @_;
     
-    if($eprint->value("type") ne "data_collection"){
-            return $repository->call("original_eprint_render", $eprint, $repository, $preview);
-         }
+    #if($eprint->value("type") ne "data_collection"){
+    #        return $repository->call("original_eprint_render", $eprint, $repository, $preview);
+    #     }
 
     my $succeeds_field   = $repository->dataset("eprint")->field("succeeds");
     my $commentary_field = $repository->dataset("eprint")->field("commentary");
@@ -120,6 +120,24 @@ $c->{eprint_render} = sub {
     #
     #
 ##########
+    if($eprint->value("type") ne "data_collection"){
+         #   return $repository->call("original_eprint_render", $eprint, $repository, $preview);
+	 foreach my $key ( keys %fragments ) { $fragments{$key} = [ $fragments{$key}, "XHTML" ]; }
+
+        my $page = $eprint->render_citation( "uel_summary_page", %fragments, flags=>$flags );
+
+        my $title = $eprint->render_citation("brief");
+
+        my $links = $repository->xml()->create_document_fragment();
+        if( !$preview )
+        {
+                $links->appendChild( $repository->plugin( "Export::Simple" )->dataobj_to_html_header( $eprint ) );
+                $links->appendChild( $repository->plugin( "Export::DC" )->dataobj_to_html_header( $eprint ) );
+        }
+
+        return( $page, $title, $links );
+    }
+
 
     #add rdessex div to append file content to
     my $div_right =
@@ -392,7 +410,7 @@ $c->{eprint_render} = sub {
         $fragments{$key} = [$fragments{$key}, "XHTML"];
     }
 
-    my $page = $eprint->render_citation("uel_summary_page", %fragments,
+    my $page = $eprint->render_citation("uel_summary_page_data", %fragments,
                                         flags => $flags);
 
     my $title = $eprint->render_citation("brief");

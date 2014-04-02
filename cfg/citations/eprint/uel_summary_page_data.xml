@@ -14,61 +14,6 @@ UEL Summary page for UEL Branding bazaar package based on recollect summary page
         <epc:print expr="$multi_info"/>
       </div>
     </epc:if>
-  
-  <section id="files_section" class="col-md-12 col-sm-12 col-xs-12">
-  	<h2>Files</h2>
-  <epc:set name='docs' expr='$item.documents()'>
-  
-    <epc:if test="length($docs) = 0">
-     
-      <p><epc:phrase ref="page:nofulltext" /></p>
-      <epc:if test="$item.contact_email().is_set() and eprint_status = 'archive'">
-        (<a href="{$config{http_cgiurl}}/request_doc?eprintid={eprintid}"><epc:phrase ref="request:button" /></a>)
-      </epc:if>
-    </epc:if>
-
-    <epc:if test="length($docs) gt 0">
-      <epc:phrase ref="page:fulltext" />
-      <table>
-        <epc:foreach expr="$docs" iterator="doc">
-          <tr>
-            <td valign="top" align="right"><epc:print expr="$doc.icon('HoverPreview','noNewWindow')}" /></td>
-            <td valign="top">
-              <epc:print expr="$doc.citation('default')" /><br />
-              <a href="{$doc.url()}" class="ep_document_link">Download (<epc:print expr="$doc.doc_size().human_filesize()" />)</a>
-              <epc:if test="$doc.is_public()">
-                          <epc:choose>
-                          <epc:when test="$doc.thumbnail_url('video_mp4').is_set()">
-                          | <epc:print expr="$doc.preview_link($doc.citation_link('default'),'docs','video_mp4')" />
-                          </epc:when>
-                          <epc:when test="$doc.thumbnail_url('audio_mp4').is_set()">
-                          | <epc:print expr="$doc.preview_link($doc.citation_link('default'),'docs','audio_mp4')" />
-                          </epc:when>
-                          <epc:when test="$doc.thumbnail_url('lightbox').is_set()">
-                          | <epc:print expr="$doc.preview_link($doc.citation_link('default'),'docs','lightbox')" />
-                          </epc:when>
-                          </epc:choose>
-                          </epc:if>
-              <epc:if test="!$doc.is_public() and $item.contact_email().is_set() and eprint_status = 'archive'">
-                | <a href="{$config{http_cgiurl}}/request_doc?docid={$doc{docid}"><epc:phrase ref="request:button" /></a>
-              </epc:if>
-
-              <ul>
-              <epc:foreach expr="$doc.related_objects('http://eprints.org/relation/hasVersion')" iterator="rel">
-                <epc:if test="$rel{relation_type}!='http://eprints.org/relation/isVolatileVersionOf'">
-                  <li><epc:print expr="$rel.citation_link('default')" /></li>
-                </epc:if>
-              </epc:foreach>
-              </ul>
-            </td>
-          </tr>
-        </epc:foreach>
-      </table>
-    </epc:if>
-
-  </epc:set>
-  </section>
-
     <epc:if test="official_url">
       <div class="rd_text_center" style="margin-bottom: 1em"><epc:phrase ref="eprint_fieldname_official_url"/>: <epc:print expr="official_url"/></div>
     </epc:if>
@@ -176,6 +121,6 @@ The next foreach loop generates the extended metadata from eprint_render.pl
     <epc:comment>
 render our file box pulled from eprint_render 
 </epc:comment>
-    <aside id="file_aside" class="col-md-4 col-sm-4 col-xs-12"></aside>
+    <aside id="file_aside" class="col-md-4 col-sm-4 col-xs-12"><epc:print expr="$rd_sorteddocs"/></aside>
   </main>
 </cite:citation>
