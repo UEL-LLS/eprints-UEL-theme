@@ -257,6 +257,7 @@ $c->{eprint_render} = sub {
               $repository->make_element(
                                         "table",
                                         id          => "filemeta",
+					class	=> "table",
                                         border      => "0",
                                         cellpadding => "2",
                                         width       => "100%"

@@ -27,10 +27,10 @@ UEL Summary page for UEL Branding bazaar package based on recollect summary page
         </p>
     </section>
     </epc:if>
-    <section class="col-md-8 col-xm-8 col-xs-12">
-     <div class="rd_citation_left">
+    <section id="metadata_section" class="col-md-8 col-xm-8 col-xs-12">
+     <div class="rd_citation_left table-condensed">
       <h2>Metadata</h2>
-      <table class="main_meta_table" style="margin-bottom: 1em; margin-top: 1em; width:100%" cellpadding="3">
+      <table class="main_meta_table table" style="margin-bottom: 1em; margin-top: 1em; width:100%" cellpadding="3">
         <epc:comment> 
 The block below loops over a list of field names taken from eprint_render.pl
 Edit the list of metadata to show in the summary page table in eprint_render.pl
@@ -74,8 +74,8 @@ The next foreach loop generates the extended metadata from eprint_render.pl
                 </div>
               </div>
               <div class="ep_summary_box_body" id="{eprintid}_content" style="display: none">
-                <div id="{eprintid}_content_inner">
-                  <table class="main_meta_table" style="margin-bottom: 1em; margin-top: 1em; width:100%" cellpadding="3">
+                <div id="{eprintid}_content_inner" class="table-condensed">
+                  <table class="main_meta_table table" style="margin-bottom: 1em; margin-top: 1em; width:100%" cellpadding="3">
                     <epc:foreach expr="$config{summary_page_metadata_full}" iterator="fieldname">
                       <epc:if test="is_set($item.property($fieldname))">
                         <tr class="main_meta_table_row">
@@ -121,6 +121,6 @@ The next foreach loop generates the extended metadata from eprint_render.pl
     <epc:comment>
 render our file box pulled from eprint_render 
 </epc:comment>
-    <aside class="col-md-4 col-sm-4 col-xs-12"><epc:print expr="$rd_sorteddocs"/></aside>
+    <aside id="file_aside" class="col-md-4 col-sm-4 col-xs-12"><epc:print expr="$rd_sorteddocs"/></aside>
   </main>
 </cite:citation>

@@ -150,7 +150,11 @@ text-transform: none;
 	left: 25.2em;
 	position: relative
 	}
+
+
+#file_aside > div {
+	box-shadow: -10px 0px 10px -7px rgba(0,0,0,0.5);
+	padding-left: 1em;
 }
 
-
-
+}
