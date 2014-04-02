@@ -4,23 +4,22 @@
 
 ****************************/
 
-@UEL-blue: 	#0397D6;
-@UEL-alt-blue: 	#0063A4;
-@UEL-font: 	#505050;
-@UEL-amaranth: 	#E61B50;
+/*@UEL-blue: 	#0397D6;
+//@UEL-alt-blue: 	#0063A4;
+//@UEL-font: 	#505050;
+//@UEL-amaranth: 	#E61B50;
 
-@ROAR-primary: 	#00C322; 
-@ROAR-secondary:#259238;
-@DATA-primary: 	#06799F;
-@DATA-secondary:#06799F;
-
+//@ROAR-primary: 	#00C322; 
+//@ROAR-secondary:#259238;
+//@DATA-primary: 	#06799F;
+//@DATA-secondary:#06799F;
+*/
 /**********************************************
 
       Colour scheme:
 // http://colorschemedesigner.com/#2S41Xw0w0w0w0
 
 /***********************************************/
-
 
 
 
@@ -39,14 +38,14 @@
 }
 
 body {
-color: @UEL-font;
+color: #050505;
 }
 
 .btn-uel {
-background-color: @UEL-blue;
+background-color: #0397D6;
 }
 .btn-uel:hover {
-background-color: @UEL-alt-blue;
+background-color: #0063A4;
 }
 
 hr {

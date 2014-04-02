@@ -21,10 +21,8 @@
     <link href="{$config{rel_path}}/roar_template/Styles/main.css" rel="stylesheet" />
     <link href="{$config{rel_path}}/roar_template/Styles/webfonts.css" rel="stylesheet" />
     <link href="{$config{rel_path}}/roar_template/Styles/search.css" rel="stylesheet" />
-    <!--link href="{$config{rel_path}}/roar_template/Styles/UEL.css" rel="stylesheet" /-->
+    <link href="{$config{rel_path}}/roar_template/Styles/UEL.css" rel="stylesheet" />
     <link href="{$config{rel_path}}/roar_template/Styles/recollect_overrides.css" rel="stylesheet" />
-    <link rel="stylesheet/less" type="text/css" href="{$config{rel_path}}/roar_template/Styles/UEL.less" />	
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.0/less.min.js" type="text/javascript"></script>
 	
   </head>
   <body>
