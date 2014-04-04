@@ -146,7 +146,12 @@
         </div>
       </main>
       <aside class="col-md-2 col-sm-2 hidden-xs">
-	<div class="shadow">
+	<div id="addnow" class="shadow">
+		<h3>Add Dataset</h3>
+		<p>Deposit a new dataset in the repository</p>
+		<form method="post" accept-charset="utf-8" action="/cgi/users/home" enctype="multipart/form-data"><input name="screen" id="screen" value="NewEPrint" type="hidden" /><input value="New Item" name="_action_create" type="submit" class="btn btn-uel" /></form>
+	</div><br />
+	<div id="sidebar" class="shadow">
 	<h3>Sidebar</h3>
 	<epc:phrase ref="about_repo" />
 	</div>
@@ -172,12 +177,22 @@
 	var j = jQuery.noConflict();
 	j( document ).ready(function() {
 		j('#ep_tm_menu_tools').addClass('nav nav-pills nav-stacked');
-		j('#ep_tabs_tabs').removeClass('ep_tab_bar').addClass('nav nav-tabs');
-		j('#ep_tabs_tabs .ep_tab_selected').addClass('active');
-		j('#ep_tabs_tabs li').click(function() {
-			j('#ep_tabs_tabs li').removeClass('active');
+	
+		var tabs = j('#ep_tabs_tabs, #ep_admin_tabs_tabs');
+		var selected_tabs = j('#ep_tabs_tabs .ep_tab_selected, #ep_admin_tabs_tabs .ep_tab_selected');
+		var li_tabs = j('#ep_tabs_tabs li, #ep_admin_tabs_tabs li');
+		tabs.removeClass('ep_tab_bar').addClass('nav nav-tabs');
+		selected_tabs.addClass('active');
+		li_tabs.click(function() {
+			li_tabs.removeClass('active');
 			j(this).addClass('active');
 		});
+
+		//pretty buttons 
+		var buttons = j('.ep_action_list .ep_form_action_button, .ep_form_action_button')
+		
+		buttons.addClass('btn btn-uel').removeClass('ep_form_action_button');
+		
 	});	
 	</script>
   </body>

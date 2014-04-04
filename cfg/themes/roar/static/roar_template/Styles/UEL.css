@@ -43,9 +43,11 @@ color: #050505;
 
 .btn-uel {
 background-color: #0397D6;
+color: #fff;
 }
 .btn-uel:hover {
 background-color: #0063A4;
+color: #fff;
 }
 
 hr {
