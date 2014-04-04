@@ -162,6 +162,17 @@
         </div>
       </footer>
     </div>
-
+	<script>
+	Event.observe(window, "load", function () {
+    		node = $("ep_tm_menu_tools");
+		node.addClassName("nav");
+		node.addClassName("nav-pills");
+		node.addClassName("nav-stacked");
+	});
+	var j = jQuery.noConflict();
+	j( document ).ready(function() {
+		j('#ep_tm_menu_tools').addClass('nav nav-pills nav-stacked');
+	});	
+	</script>
   </body>
 </html>
