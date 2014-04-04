@@ -172,6 +172,12 @@
 	var j = jQuery.noConflict();
 	j( document ).ready(function() {
 		j('#ep_tm_menu_tools').addClass('nav nav-pills nav-stacked');
+		j('#ep_tabs_tabs').removeClass('ep_tab_bar').addClass('nav nav-tabs');
+		j('#ep_tabs_tabs .ep_tab_selected').addClass('active');
+		j('#ep_tabs_tabs li').click(function() {
+			j('#ep_tabs_tabs li').removeClass('active');
+			j(this).addClass('active');
+		});
 	});	
 	</script>
   </body>
