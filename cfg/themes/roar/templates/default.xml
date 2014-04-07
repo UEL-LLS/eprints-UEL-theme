@@ -147,8 +147,10 @@
       </main>
       <aside class="col-md-2 col-sm-2 hidden-xs">
 	<div id="addnow" class="shadow">
-		<h3>Add Dataset</h3>
-		<p>Deposit a new dataset in the repository</p>
+		<h3>
+			<epc:phrase ref="deposit_h"/>
+		</h3>
+		<p><epc:phrase ref="deposit"/></p>
 		<form method="post" accept-charset="utf-8" action="/cgi/users/home" enctype="multipart/form-data"><input name="screen" id="screen" value="NewEPrint" type="hidden" /><input value="New Item" name="_action_create" type="submit" class="btn btn-uel" /></form>
 	</div><br />
 	<div id="sidebar" class="shadow">

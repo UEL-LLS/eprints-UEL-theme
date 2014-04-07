@@ -3,5 +3,7 @@
 <epp:phrases xmlns="http://www.w3.org/1999/xhtml" xmlns:epp="http://eprints.org/ep3/phrase" xmlns:epc="http://eprints.org/ep3/control">
 
 <epp:phrase id="about_repo">This is about ROAR<br /> What it does and what its for and who uses it.</epp:phrase>
+<epp:phrase id="deposit_h">Add Dataset.</epp:phrase>
+<epp:phrase id="deposit">Desposit a new item into the repository.</epp:phrase>
 
 </epp:phrases>
