@@ -1,11 +1,17 @@
 .hidden {display: position: absolute; left -9999px; top:-9999px;}
 
-
+/********
+ basics
+********/
 body {
 font-family: Arial, Helvetica, sans-serif;
 font-size: 14px line-height: 20px;
 color: #333333;
 }
+.ep_summary_box_title, .ep_summary_box_body, .ep_sr_title_bar, .ep_sr_content, .ep_sr_collapse_bar, .ep_tab_panel, .ep_toolbox_content, .ep_upload_doc, .ep_search_buttons, .ep_search_controls, .ep_search_controls_bottom, .ep_view_group_by {
+background-color: #fff;
+}
+
 
 #main_page > nav, #main_page > main {
 margin-bottom: 1em;

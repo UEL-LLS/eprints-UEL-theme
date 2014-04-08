@@ -2,22 +2,28 @@
 
    UEL Branding additions
 
-****************************/
+****************************
 
-/*@UEL-blue: 	#0397D6;
-//@UEL-alt-blue: 	#0063A4;
-//@UEL-font: 	#505050;
-//@UEL-amaranth: 	#E61B50;
+@UEL-blue: 		#0397D6;
+@UEL-alt-blue: 	#0063A4;
+@UEL-font: 		#505050;
 
-//@ROAR-primary: 	#00C322; 
-//@ROAR-secondary:#259238;
-//@DATA-primary: 	#06799F;
-//@DATA-secondary:#06799F;
-*/
-/**********************************************
 
-      Colour scheme:
-// http://colorschemedesigner.com/#2S41Xw0w0w0w0
+*** UEL Blue:
+
+   var. 1 = #0396D6
+   var. 2 = #0063A4
+
+*** ROAR Green:
+
+   var. 1 = #59af40 
+   var. 2 = #419028
+
+*** Data Purple:
+
+   var. 1 = #8a2881
+   var. 2 = #72196A
+
 
 /***********************************************/
 
@@ -27,7 +33,6 @@
 	.emptyCarouselPlaceholder {
 		height: 124px;
 	}
-
 	.uel-grad {
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #009bd9), color-stop(100%, #028ec7));
 		background: -webkit-linear-gradient(top, #009bd9 0%, #028ec7 100%);
@@ -45,10 +50,34 @@ color: #050505;
 background-color: #0397D6;
 color: #fff;
 }
+
 .btn-uel:hover {
 background-color: #0063A4;
 color: #fff;
 }
+
+.btn-roar {  
+background-color: #59af40;
+color: #fff;
+}
+.btn-roar:hover {
+background-color: #419028;
+color: #fff;
+}
+.btn-data {
+background-color: #8a2881;
+color: #fff;
+}
+.btn-data:hover {
+background-color: #72196A;
+color: #fff;
+}
+
+
+dt > form > input.btn.btn-uel {
+min-width: 9em;
+}
+
 
 hr {
 margin: 20px 0;
