@@ -154,10 +154,15 @@
 		<form method="post" accept-charset="utf-8" action="/cgi/users/home" enctype="multipart/form-data"><input name="screen" id="screen" value="NewEPrint" type="hidden" /><input value="New Item" name="_action_create" type="submit" class="btn btn-uel" /></form>
 	</div><br />
 	<div id="sidebar" class="shadow">
-	<h3>Sidebar</h3>
-	<epc:phrase ref="about_repo" />
+		<h3>Sidebar</h3>
+		<epc:phrase ref="about_repo" />
+	</div>
+	<br />
+	<div id="sidebar_top10" class="shadow">
+		<h3>Top 10</h3>
 	</div>
       </aside>
+	
       <footer>
         <div class="ep_tm_footer ep_noprint">
           <div class="ep_tm_eprints_logo">
@@ -180,14 +185,14 @@
 	j( document ).ready(function() {
 		j('#ep_tm_menu_tools').addClass('nav nav-pills nav-stacked');
 	
-		var tabs = j('#ep_tabs_tabs, #ep_admin_tabs_tabs');
-		var selected_tabs = j('#ep_tabs_tabs .ep_tab_selected, #ep_admin_tabs_tabs .ep_tab_selected');
-		var li_tabs = j('#ep_tabs_tabs li, #ep_admin_tabs_tabs li');
+		var tabs = j('#ep_tabs_tabs, #ep_admin_tabs_tabs, #ep_workflow_views_tabs');
+		var selected_tabs = j('#ep_tabs_tabs .ep_tab_selected, #ep_admin_tabs_tabs .ep_tab_selected, #ep_workflow_views_tabs .ep_tab_selected');
+		var li_tabs = j('#ep_tabs_tabs li, #ep_admin_tabs_tabs li, #ep_workflow_views_tabs li');
 		tabs.removeClass('ep_tab_bar').addClass('nav nav-tabs');
 		selected_tabs.addClass('active');
 		li_tabs.click(function() {
 			li_tabs.removeClass('active');
-			j(this).addClass('active');
+			j(this).removeClass('ep_tab_selected').addClass('active');
 		});
 
 		//pretty buttons 
